@@ -5,16 +5,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.webmvc.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class AuthorService {
 
     @Autowired
     private AuthorRepository authorRepository;
 
+    // GET AUTHOR BY ID
+    public Author getAuthorById(Long id) {
+        return authorRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Author not found with id: " + id));
+    }
+
+    // GET ALL AUTHORS
+    public Iterable<Author> getAllAuthors() {
+        return authorRepository.findAll();
+    }
+
+    // CREATE AUTHOR
     public Author createAuthor(Author newAuthor) {
         return authorRepository.save(newAuthor);
     }
 
+    // UPDATE AUTHOR BY ID
     public Author updateAuthorById(long id, Author updatedAuthor) {
         Author existingAuthor = authorRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Author not found with id: " + id));

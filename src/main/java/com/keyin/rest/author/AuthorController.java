@@ -14,6 +14,23 @@ public class AuthorController {
     @Autowired
     private AuthorService authorService;
 
+    @GetMapping("/author/{id}")
+    public ResponseEntity<?> getAuthorById(@PathVariable long id) {
+        try {
+            Author author = authorService.getAuthorById(id);
+            return ResponseEntity.ok().body(author);
+        } catch (ResourceNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Internal Server Error");
+        }
+    }
+
+    @GetMapping("/author")
+    public Iterable<Author> getAllAuthors() {
+        return authorService.getAllAuthors();
+    }
+
     @PostMapping("/author")
     public ResponseEntity<?> createAuthor(@RequestBody Author author) {
         try {
