@@ -39,4 +39,17 @@ public class AuthorService {
 
         return authorRepository.save(existingAuthor);
     }
+
+    // DELETE AUTHOR BY ID
+    public void deleteAuthorById(long id) {
+        Author existingAuthor = authorRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Author not found with id: " + id));
+
+        authorRepository.delete(existingAuthor);
+    }
+
+    // DELETE ALL AUTHORS
+    public void deleteAllAuthors() {
+        authorRepository.deleteAll();
+    }
 }

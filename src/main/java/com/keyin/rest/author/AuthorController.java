@@ -53,4 +53,22 @@ public class AuthorController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
+
+    @DeleteMapping("/author/{id}")
+    public ResponseEntity<?> deleteAuthorById(@PathVariable long id) {
+        try {
+            authorService.deleteAuthorById(id);
+            return ResponseEntity.ok().build();
+        } catch (ResourceNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Internal Server Error");
+        }
+    }
+
+    @DeleteMapping("/author")
+    public ResponseEntity<?> deleteAllAuthors() {
+        authorService.deleteAllAuthors();
+        return ResponseEntity.ok().build();
+    }
 }
