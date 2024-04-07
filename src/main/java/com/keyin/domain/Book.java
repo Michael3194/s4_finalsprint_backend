@@ -1,5 +1,6 @@
 package com.keyin.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -13,10 +14,12 @@ public class Book {
     private String title;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "author_id", referencedColumnName = "id", nullable = false)
     private Author author;
 
     @ManyToOne(cascade = CascadeType.ALL)
+    @JsonIgnore
     @JoinColumn(name = "genre_id", referencedColumnName = "id", nullable = false)
     private Genre genre;
 
