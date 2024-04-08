@@ -1,5 +1,6 @@
 package com.keyin.rest.book;
 
+import com.keyin.domain.Author;
 import com.keyin.domain.Book;
 import com.keyin.rest.request.CreateBookRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,18 @@ public class BookController {
             return ResponseEntity.status(HttpStatus.CREATED).body(createdBook);
         } catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest().body(null);
+        }
+    }
+
+    @GetMapping("/book/{id}")
+    public ResponseEntity<?> getBookById(@PathVariable long id) {
+        try {
+            Book book = bookService.getBookById(id);
+            return ResponseEntity.ok().body(book);
+        } catch (ResourceNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Internal Server Error");
         }
     }
 }
