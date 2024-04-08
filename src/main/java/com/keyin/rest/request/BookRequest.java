@@ -1,11 +1,11 @@
 package com.keyin.rest.request;
 
-public class CreateBookRequest {
+public class BookRequest {
 
     private String title;
-    private long authorId;
-    private long genreId;
-    private long pageCount;
+    private Long authorId;
+    private Long genreId;
+    private Long pageCount;
 
     public String getTitle() {
         return title;
@@ -15,7 +15,7 @@ public class CreateBookRequest {
         this.title = title;
     }
 
-    public long getAuthorId() {
+    public Long getAuthorId() {
         return authorId;
     }
 
@@ -23,7 +23,7 @@ public class CreateBookRequest {
         this.authorId = authorId;
     }
 
-    public long getGenreId() {
+    public Long getGenreId() {
         return genreId;
     }
 

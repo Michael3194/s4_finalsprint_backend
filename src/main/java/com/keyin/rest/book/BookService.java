@@ -5,6 +5,7 @@ import com.keyin.domain.Book;
 import com.keyin.domain.Genre;
 import com.keyin.rest.author.AuthorRepository;
 import com.keyin.rest.genre.GenreRepository;
+import com.keyin.rest.request.BookRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.webmvc.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
@@ -53,4 +54,40 @@ public class BookService {
         return bookRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Book not found with id: " + id));
     }
+
+
+    public Book updateBookById(Long id, BookRequest bookRequest) {
+        Book book = bookRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Book not found with id: " + id));
+
+        // Update the book fields based on the request
+        book.setTitle(bookRequest.getTitle());
+        book.setPageCount(bookRequest.getPageCount());
+        book.setAuthorId(bookRequest.getAuthorId());
+        book.setGenreId(bookRequest.getGenreId());
+
+        // Update the author and genre if provided
+        if (bookRequest.getAuthorId() != null) {
+            Optional<Author> authorOptional = authorRepository.findById(bookRequest.getAuthorId());
+            if (authorOptional.isPresent()) {
+                Author author = authorOptional.get();
+                book.setAuthor(author);
+            } else {
+                throw new ResourceNotFoundException("Author not found with ID: " + bookRequest.getAuthorId());
+            }
+        }
+
+        if (bookRequest.getGenreId() != null) {
+            Optional<Genre> genreOptional = genreRepository.findById(bookRequest.getGenreId());
+            if (genreOptional.isPresent()) {
+                Genre genre = genreOptional.get();
+                book.setGenre(genre);
+            } else {
+                throw new ResourceNotFoundException("Genre not found with ID: " + bookRequest.getGenreId());
+            }
+        }
+
+        return bookRepository.save(book);
+    }
+
 }

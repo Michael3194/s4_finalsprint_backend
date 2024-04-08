@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d8f95b2-307c-4ed2-b167-61f62733eeb0" name="Changes" comment="createBook() method added and working with postmapping(&quot;/book&quot;)">
+    <list default="true" id="5d8f95b2-307c-4ed2-b167-61f62733eeb0" name="Changes" comment="getBookById()">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/domain/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/rest/book/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/book/BookController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/rest/book/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/book/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/rest/request/CreateBookRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/request/BookRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +65,7 @@
     "Maven.s4_finalsprint_backend [package].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "bookApi",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/keyinstudent/Desktop/semester4/final-sprint/backend/s4_finalsprint_backend",
@@ -146,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712532575231</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="getBookById()">
+      <option name="closed" value="true" />
+      <created>1712610223302</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712610223302</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,6 +190,7 @@
     <MESSAGE value="- Added Author entity&#10;- createAuthor() - working&#10;- updateAuthorById() - working" />
     <MESSAGE value="deleteAuthorById() and deleteAllAuthors()" />
     <MESSAGE value="createBook() method added and working with postmapping(&quot;/book&quot;)" />
-    <option name="LAST_COMMIT_MESSAGE" value="createBook() method added and working with postmapping(&quot;/book&quot;)" />
+    <MESSAGE value="getBookById()" />
+    <option name="LAST_COMMIT_MESSAGE" value="getBookById()" />
   </component>
 </project>
