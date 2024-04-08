@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5d8f95b2-307c-4ed2-b167-61f62733eeb0" name="Changes" comment="updateBookById()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/rest/book/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/book/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/domain/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/rest/book/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/book/BookService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,12 +30,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Michael3194"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Michael3194&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>

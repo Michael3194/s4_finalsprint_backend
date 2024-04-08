@@ -45,6 +45,8 @@ public class BookService {
         newBook.setAuthor(author);
         newBook.setGenre(genre);
         newBook.setPageCount(pageCount);
+        newBook.setAuthorId(author.getId());
+        newBook.setGenreId(genre.getId());
 
         // Save the book to the database
         return bookRepository.save(newBook);
