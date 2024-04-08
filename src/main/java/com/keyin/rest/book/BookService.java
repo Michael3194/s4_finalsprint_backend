@@ -48,4 +48,9 @@ public class BookService {
         // Save the book to the database
         return bookRepository.save(newBook);
     }
+
+    public Book getBookById(Long id) {
+        return bookRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Book not found with id: " + id));
+    }
 }

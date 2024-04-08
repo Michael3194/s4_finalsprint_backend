@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d8f95b2-307c-4ed2-b167-61f62733eeb0" name="Changes" comment="deleteAuthorById() and deleteAllAuthors()">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/config/sql/insert-genres.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/book/BookController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/book/BookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/book/BookService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/genre/GenreController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/genre/GenreRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/genre/GenreService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/request/CreateBookRequest.java" afterDir="false" />
+    <list default="true" id="5d8f95b2-307c-4ed2-b167-61f62733eeb0" name="Changes" comment="createBook() method added and working with postmapping(&quot;/book&quot;)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/domain/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/Author.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/domain/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/rest/author/AuthorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/author/AuthorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/rest/book/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/book/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/rest/book/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/book/BookService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,10 +26,24 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="authorAPI" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Michael3194"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="010fb629-b1e7-4bd6-9ea0-8db0c6e25949" />
+        <option name="url" value="https://github.com/Michael3194/s4_finalsprint_backend.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -57,7 +62,7 @@
     "Maven.s4_finalsprint_backend [package].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "bookApi",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/keyinstudent/Desktop/semester4/final-sprint/backend/s4_finalsprint_backend",
     "project.structure.last.edited": "Modules",
@@ -133,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712362001374</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="createBook() method added and working with postmapping(&quot;/book&quot;)">
+      <option name="closed" value="true" />
+      <created>1712532575231</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712532575231</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -164,6 +177,7 @@
     <MESSAGE value="Added two entities: Book and Genre" />
     <MESSAGE value="- Added Author entity&#10;- createAuthor() - working&#10;- updateAuthorById() - working" />
     <MESSAGE value="deleteAuthorById() and deleteAllAuthors()" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleteAuthorById() and deleteAllAuthors()" />
+    <MESSAGE value="createBook() method added and working with postmapping(&quot;/book&quot;)" />
+    <option name="LAST_COMMIT_MESSAGE" value="createBook() method added and working with postmapping(&quot;/book&quot;)" />
   </component>
 </project>
