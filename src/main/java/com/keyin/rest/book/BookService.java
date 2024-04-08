@@ -90,4 +90,11 @@ public class BookService {
         return bookRepository.save(book);
     }
 
+    public void deleteBookById(Long id) {
+        if (!bookRepository.existsById(id)) {
+            throw new ResourceNotFoundException("Book not found with id: " + id);
+        }
+        bookRepository.deleteById(id);
+    }
+
 }
