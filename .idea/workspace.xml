@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d8f95b2-307c-4ed2-b167-61f62733eeb0" name="Changes" comment="createBook() method fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/domain/UserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/user/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/user/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/user/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/service/PasswordHashingService.java" afterDir="false" />
+    <list default="true" id="5d8f95b2-307c-4ed2-b167-61f62733eeb0" name="Changes" comment="added User, UserRole and createUser(), PasswordHashingService">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/user/LoginRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/rest/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/user/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/rest/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/user/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/keyin/rest/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/keyin/rest/user/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712618195361</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added User, UserRole and createUser(), PasswordHashingService">
+      <option name="closed" value="true" />
+      <created>1712687205798</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712687205799</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -211,6 +217,7 @@
     <MESSAGE value="getBookById()" />
     <MESSAGE value="updateBookById()" />
     <MESSAGE value="createBook() method fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="createBook() method fix" />
+    <MESSAGE value="added User, UserRole and createUser(), PasswordHashingService" />
+    <option name="LAST_COMMIT_MESSAGE" value="added User, UserRole and createUser(), PasswordHashingService" />
   </component>
 </project>

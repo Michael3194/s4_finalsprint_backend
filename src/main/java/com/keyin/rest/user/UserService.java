@@ -24,4 +24,22 @@ public class UserService {
 
         return userRepository.save(user);
     }
+
+    public User findByUsername(String username) {
+        return userRepository.findByUsername(username);
+    }
+
+
+    public User authenticateUser(LoginRequest loginRequest) {
+        // Retrieve the user by username from the database
+        User user = userRepository.findByUsername(loginRequest.getUsername());
+
+        // Check if the user exists and if the password matches
+        if (user != null && passwordHashingService.verifyPassword(loginRequest.getPassword(), user.getPassword())) {
+            return user;
+        } else {
+            return null;
+        }
+    }
+
 }
