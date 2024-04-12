@@ -36,6 +36,7 @@ public class UserService {
 
         // Check if the user exists and if the password matches
         if (user != null && passwordHashingService.verifyPassword(loginRequest.getPassword(), user.getPassword())) {
+            user.setPassword(null); // Set password to null from response for security
             return user;
         } else {
             return null;
